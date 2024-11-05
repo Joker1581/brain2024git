@@ -13,7 +13,6 @@ import json
 import argparse
 import wandb
 import matplotlib.pyplot as plt
-
     
 wandb.init(project="eeg_vit_vqvae", entity="ohicarip")
 
