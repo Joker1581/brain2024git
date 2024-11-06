@@ -79,6 +79,7 @@ model = ViT(patch_size=64, emb_dim=768, num_classes=8).to(device)
 # state_dict = torch.load('./checkpoints/mae/model_latest.pth')
 # model.load_checkpoint(state_dict)
 
+
 def get_parser():
     parser = argparse.ArgumentParser(description=' ')
     parser.add_argument('--config', type=str, default='./model/cfg.yaml', help='config file')
