@@ -13,7 +13,8 @@ import json
 import argparse
 import wandb
 import matplotlib.pyplot as plt
-    
+
+
 wandb.init(project="eeg_vit_vqvae", entity="ohicarip")
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
