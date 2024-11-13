@@ -13,9 +13,9 @@ import json
 import argparse
 import wandb
 import matplotlib.pyplot as plt
-
+#初始化 wandb 实验，用于记录实验信息，便于可视化和跟踪。
 wandb.init(project="eeg_vit_vqvae", entity="ohicarip")
-
+#选择计算设备（优先使用 GPU），并定义数据和注释的目录路径
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 data_dir = './datasets'
 anno_dir = os.path.join(data_dir, 'annotation_order.json')
@@ -108,7 +108,7 @@ optimizer = AdamW(model.parameters(), lr=1e-4)
 scheduler = StepLR(optimizer, step_size=10, gamma=0.1)
 criterion = nn.CrossEntropyLoss()
 
-# Training loop
+# Training loop 开始训练循环，设定模型为训练模式并初始化损失、正确预测数等统计变量。
 num_epochs = 100
 best_loss = float('inf')
 for epoch in range(num_epochs):
