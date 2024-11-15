@@ -21,6 +21,7 @@ data_dir = './datasets'
 anno_dir = os.path.join(data_dir, 'annotation_order.json')
 eeg_dir = data_dir
 
+
 def log_image_to_wandb(data, inout="input", train_or_test='train', epoch=0):
     """
     Function to plot the input data and log the image to WandB.
