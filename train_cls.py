@@ -156,6 +156,7 @@ for epoch in range(num_epochs):
     total = 0
     
     
+    
     with torch.no_grad():
         
         for i, (eeg_sample, label) in enumerate(test_loader):
