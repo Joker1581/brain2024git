@@ -21,6 +21,7 @@ data_dir = './datasets'
 anno_dir = os.path.join(data_dir, 'annotation_order.json')
 eeg_dir = data_dir
 
+
 # 读取图片
 
 
